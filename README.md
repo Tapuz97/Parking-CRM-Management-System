@@ -63,13 +63,17 @@ This repository includes everything needed to run and test the system:
 ## How to Run
 
 1. Clone the repository:
-   ```bash git clone https://github.com/Tapuz97/parking-lot-crm.git```
-2. Open the project in your preferred Java IDE (Eclipse/IntelliJ).
-3. Import `parking_db.sql` using MySQL Workbench or Terminal (password is Aa123456)
-```bash mysql -u root -p < path/to/your_script.sql ``` 
-4. Launch the server (`Park_Server.java`).
-5. Launch the client (`Park_Client.java`) on the same or different machine.
-6. Log in as a subscriber/Admin. (user: Admin password: admin)
+   ```bash
+   git clone https://github.com/Tapuz97/parking-lot-crm.git
+   ```
+3. Open the project in your preferred Java IDE (Eclipse/IntelliJ).
+4. Import `parking_db.sql` using MySQL Workbench or Terminal (if promted, password is Aa123456)
+```bash
+ mysql -u root -p < path/to/your_script.sql
+ ``` 
+6. Launch the server (`Park_Server.java`).
+7. Launch the client (`Park_Client.java`) on the same or different machine.
+8. Log in as a subscriber/Admin. (user: Admin password: admin)
 
 > **⚠️**: Ensure the MySQL connection string and ports are configured correctly. (Default prefill 127.0.0.1:3306 i,e localhost)
 
