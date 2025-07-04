@@ -68,9 +68,9 @@ This repository includes everything needed to run and test the system:
    ```
 3. Open the project in your preferred Java IDE (Eclipse/IntelliJ).
 4. Import `parking_db.sql` using MySQL Workbench or Terminal (if promted, password is Aa123456)
-```bash
- mysql -u root -p < path/to/your_script.sql
- ``` 
+   ```bash
+    mysql -u root -p < path/to/your_script.sql
+    ``` 
 6. Launch the server (`Park_Server.java`).
 7. Launch the client (`Park_Client.java`) on the same or different machine.
 8. Log in as a subscriber/Admin. (user: Admin password: admin)
