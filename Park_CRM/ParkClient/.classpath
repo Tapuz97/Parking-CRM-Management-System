@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="resources/" kind="src" path="src"/>
+	<classpathentry kind="src" path="lib"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="src" path="/OCSF"/>
+	<classpathentry kind="lib" path="src/lib/com.google.gson_2.9.1.v20220915-1632.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="https://www.javadoc.io/doc/com.google.code.gson/gson/2.9.1/com.google.gson/module-summary.html"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="src/lib/core-3.5.3.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="https://javadoc.io/doc/com.google.zxing/core/latest/index.html"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="src/lib/javase-3.5.3.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="https://javadoc.io/doc/com.google.zxing/javase/latest/index.html"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane fx:id="mainScreen" prefHeight="321.0" prefWidth="590.0" styleClass="root" fx:controller="client_gui.ManagerScreensController" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+	<Tab closable="false" text="Create User">
+	  <content>
+	    <AnchorPane>
+	      <children>
+	        <Text layoutX="14.0" layoutY="48.0" styleClass="text-header" text="Create User">
+	          <font><Font name="Calibri Bold" size="38.0"/></font>
+	        </Text>
+	        <TextField fx:id="CreateUserName" layoutX="75.0" layoutY="67.0" prefWidth="175.0" promptText="User name" styleClass="text-field"/>
+	        <TextField fx:id="CreateUserPhone" layoutX="333.0" layoutY="67.0" prefWidth="175.0" promptText="User Phone" styleClass="text-field"/>
+	        <TextField fx:id="CreateUserEmail" layoutX="75.0" layoutY="115.0" prefWidth="175.0" promptText="User Email" styleClass="text-field"/>
+	        <TextField fx:id="CreateUserPassword" layoutX="333.0" layoutY="115.0" prefWidth="175.0" promptText="User Password" styleClass="text-field"/>
+	        <TextField fx:id="CreateUserID" layoutX="75.0" layoutY="169.0" prefWidth="175.0" promptText="User ID" editable="false" disable="true" styleClass="text-field"/>
+	        <Button fx:id="CreateUserBtn" layoutX="244.0" layoutY="209.0" text="Create" onAction="#CreateUser" prefWidth="92.0" prefHeight="39.0" styleClass="button"/>
+	      </children>
+	    </AnchorPane>
+	  </content>
+	</Tab>
+
+	<Tab closable="false" text="Show User History">
+	  <content>
+	    <AnchorPane>
+	      <children>
+	        <Text layoutX="14.0" layoutY="48.0" styleClass="text-header" text="User History">
+	          <font><Font name="Calibri Bold" size="38.0"/></font>
+	        </Text>
+	        <TextField fx:id="UserHistoryInput" layoutX="241.0" layoutY="17.0" prefWidth="189.0" promptText="User ID" styleClass="text-field"/>
+	        <Button fx:id="SearchHistoryBtn" layoutX="460.0" layoutY="18.0" text="Search" onAction="#SearchUserHistory" prefWidth="109.0" prefHeight="35.0" styleClass="button"/>
+	        <ListView fx:id="UserHistoryList" layoutX="27.0" layoutY="70.0" prefWidth="536.0" prefHeight="178.0" styleClass="list-view"/>
+	      </children>
+	    </AnchorPane>
+	  </content>
+	</Tab>
+
+	<Tab closable="false" text="Recover User">
+	  <content>
+	    <AnchorPane>
+	      <children>
+	        <Text layoutX="14.0" layoutY="43.0" styleClass="text-header" text="Recover User">
+	          <font><Font name="Calibri Bold" size="38.0"/></font>
+	        </Text>
+	
+	        <HBox layoutX="229.0" layoutY="16.0" spacing="35.0">
+	          <children>
+	            <TextField fx:id="UserRecoverInput" prefHeight="38.0" prefWidth="189.0" promptText="User ID" styleClass="text-field"/>
+	            <Button fx:id="RecoverBtn" text="Recover" onAction="#RecoverUser" prefHeight="35.0" prefWidth="109.0" styleClass="button"/>
+	          </children>
+	        </HBox>
+	
+	        <TextField fx:id="RecoverUserName" layoutX="92.0" layoutY="91.0" prefHeight="26.0" prefWidth="175.0"
+	                   promptText="User name" editable="false" disable="true" styleClass="text-field"/>
+	        <TextField fx:id="RecoverUserPhone" layoutX="322.0" layoutY="91.0" prefHeight="26.0" prefWidth="175.0"
+	                   promptText="User Phone" editable="false" disable="true" styleClass="text-field"/>
+	        <TextField fx:id="RecoverUserEmail" layoutX="92.0" layoutY="145.0" prefHeight="26.0" prefWidth="175.0"
+	                   promptText="User Email" editable="false" disable="true" styleClass="text-field"/>
+	        <TextField fx:id="RecoverUserParking" layoutX="322.0" layoutY="145.0" prefHeight="26.0" prefWidth="175.0"
+	                   promptText="Current Parking" editable="false" disable="true" styleClass="text-field"/>
+	      </children>
+	    </AnchorPane>
+	  </content>
+	</Tab>
+
+	<Tab closable="false" onSelectionChanged="#getCurrentParkingStatus" text="Current Parking Status">
+	  <content>
+	    <AnchorPane>
+	      <children>
+	        <Text layoutX="24.0" layoutY="43.0" styleClass="text-header" text="Current Parking Status">
+	          <font><Font name="Calibri Bold" size="38.0"/></font>
+	        </Text>
+	
+	        <Text layoutX="449.0" layoutY="38.0" styleClass="text-miniheader" text="Capacity">
+	          <font><Font name="Calibri" size="20.0"/></font>
+	        </Text>
+	
+	        <TextField fx:id="Capicity" layoutX="524.0" layoutY="16.0" prefHeight="34.0" prefWidth="54.0"
+	                   promptText="100%" text="100%" editable="false" alignment="CENTER" styleClass="text-field">
+	          <font><Font name="Calibri Bold" size="15.0"/></font>
+	        </TextField>
+	
+	        <ListView fx:id="CurrentParkingList" layoutX="9.0" layoutY="67.0"
+	                  prefHeight="187.0" prefWidth="572.0" styleClass="list-view"/>
+	      </children>
+	    </AnchorPane>
+	  </content>
+	</Tab>
+
+	<Tab fx:id="AdminTab" closable="false" onSelectionChanged="#DisableAdminPane" text="Admin">
+	  <content>
+	    <AnchorPane prefHeight="346.0" prefWidth="551.0">
+	      <children>
+	        <Text layoutX="229.0" layoutY="43.0" styleClass="text-header" text="Admin">
+	          <font><Font name="Calibri Bold" size="38.0"/></font>
+	        </Text>
+	
+	        <Button fx:id="LogoutBtn" layoutX="242.0" layoutY="217.0" text="← Logout"
+	                onAction="#Logout" prefHeight="32.0" prefWidth="97.0" styleClass="button">
+	          <font><Font name="Calibri Bold" size="14.0"/></font>
+	        </Button>
+	
+	        <Pane fx:id="AdminPane" layoutX="117.0" layoutY="73.0">
+	          <children>
+	            <VBox alignment="TOP_CENTER" layoutX="17.0" layoutY="6.0" prefHeight="139.0" prefWidth="338.0" spacing="50.0">
+	              <children>
+	
+	                <HBox alignment="CENTER" spacing="40.0">
+	                  <children>
+	                    <MenuButton fx:id="MonthInput" prefHeight="27.0" prefWidth="113.0" text="Month">
+	                      <items>
+	                        <MenuItem text="January" onAction="#handleMonthSelection"/>
+	                        <MenuItem text="February" onAction="#handleMonthSelection"/>
+	                        <MenuItem text="March" onAction="#handleMonthSelection"/>
+	                        <MenuItem text="April" onAction="#handleMonthSelection"/>
+	                        <MenuItem text="May" onAction="#handleMonthSelection"/>
+	                        <MenuItem text="June" onAction="#handleMonthSelection"/>
+	                        <MenuItem text="July" onAction="#handleMonthSelection"/>
+	                        <MenuItem text="August" onAction="#handleMonthSelection"/>
+	                        <MenuItem text="September" onAction="#handleMonthSelection"/>
+	                        <MenuItem text="October" onAction="#handleMonthSelection"/>
+	                        <MenuItem text="November" onAction="#handleMonthSelection"/>
+	                        <MenuItem text="December" onAction="#handleMonthSelection"/>
+	                      </items>
+	                    </MenuButton>
+	
+	                    <MenuButton fx:id="YearInput" prefHeight="27.0" prefWidth="113.0" text="Year">
+	                      <items>
+	                        <MenuItem text="2024" onAction="#handleYearSelection"/>
+	                        <MenuItem text="2025" onAction="#handleYearSelection"/>
+	                        <MenuItem text="2026" onAction="#handleYearSelection"/>
+	                      </items>
+	                    </MenuButton>
+	                  </children>
+	                </HBox>
+	
+	                <HBox alignment="CENTER" spacing="40.0">
+	                  <children>
+	                    <Button fx:id="ParkingReportBtn" text="Parking Report" onAction="#ShowParkingReport"
+	                            prefHeight="32.0" prefWidth="129.0" styleClass="button"/>
+	                    <Button fx:id="UserReportBtn" text="User Report" onAction="#ShowUserReport"
+	                            prefHeight="32.0" prefWidth="129.0" styleClass="button"/>
+	                  </children>
+	                </HBox>
+	
+	              </children>
+	            </VBox>
+	          </children>
+	        </Pane>
+	
+	        <ToggleButton fx:id="themeToggle" layoutX="525.0" layoutY="22.0"
+	                      text="☀🌙" onAction="#switchTheme" styleClass="toggle-button"/>
+	      </children>
+	    </AnchorPane>
+	  </content>
+	</Tab>
+
+  </tabs>
+</TabPane>

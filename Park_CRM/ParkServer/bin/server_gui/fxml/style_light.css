@@ -1,0 +1,172 @@
+.root {
+    -fx-background-color: #f2f2f2;
+}
+
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #2b3137;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-border-color: #fdca2b;
+    -fx-text-fill: #2b3137;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #fdca2b;
+    -fx-text-fill: #ffffff;
+}
+
+.text-header {
+    -fx-font-family: "Calibri";
+    -fx-font-size: 38px;
+    -fx-font-weight: bold;
+    -fx-fill: #ffffff;
+    -fx-stroke: #fdca2b;
+    -fx-stroke-width: 0.5;
+}
+
+.text-miniheader {
+    -fx-font-family: "Calibri";
+    -fx-font-size: 38px;
+    -fx-font-weight: bold;
+    -fx-fill: #fdca2b;
+    
+}
+
+.list-view {
+    -fx-background-color: #ffffff;
+    -fx-control-inner-background: #ffffff;
+    -fx-border-color: transparent;
+    -fx-border-radius: 15;
+
+
+}
+
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #2b3137;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+}
+
+.list-cell:hover {
+    -fx-background-color: #dadada;
+    -fx-text-fill: #2b3137;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+}
+
+.list-active-cell{
+    -fx-background-color: #e0f0e3;
+    -fx-text-fill: #2b3137;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+}
+
+.list-active-cell:hover{
+    -fx-background-color: #b8d8be;
+    -fx-text-fill: #2b3137;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+}
+
+.list-terminated-cell{
+    -fx-background-color: #fde0e0;
+    -fx-text-fill: #2b3137;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+}
+
+.list-terminated-cell:hover{
+    -fx-background-color: #fdaaaa;
+    -fx-text-fill: #2b3137;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+}
+
+.list-inactive-cell{
+    -fx-background-color: #ffe2cc;
+    -fx-text-fill: #2b3137;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+}
+
+.list-inactive-cell:hover{
+    -fx-background-color: #ffbe94;
+    -fx-text-fill: #2b3137;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+}
+
+.img-button{
+    -fx-image: url("csv_default.png");
+    -fx-cursor: hand;
+    -fx-padding: 5;
+}
+.img-button:hover {
+    -fx-image: url("csv_alt.png");
+    -fx-effect: dropshadow(gaussian, #00bf5b, 6, 0.5, 0, 0);
+}
+
+.toggle-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #fdca2b;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-text-fill: #2b3137;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.toggle-button:hover {
+    -fx-background-color: #fdca2b;
+    -fx-text-fill: #ffffff;
+}
+
+.toggle-button:selected {
+    -fx-background-color: #fdca2b;
+    -fx-text-fill: #ffffff;
+}
+
+/* === Custom Alert Dialog === */
+.custom-alert {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+    -fx-border-color: #fdca2b;
+    -fx-border-radius: 10;
+}
+
+.custom-alert .content {
+    -fx-text-fill: #2b3137;
+    -fx-font-family: "Calibri";
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+}
+
+.custom-alert .button-bar .button {
+    -fx-background-color: transparent;
+    -fx-border-color: #fdca2b;
+    -fx-text-fill: #2b3137;
+    -fx-font-weight: bold;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-cursor: hand;
+}
+
+.custom-alert .button-bar .button:hover {
+    -fx-background-color: #fdca2b;
+    -fx-text-fill: #ffffff;
+}

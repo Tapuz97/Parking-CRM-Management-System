@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainScreen" prefHeight="514.0" prefWidth="800.0" styleClass="root" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client_gui.ParkingReportController">
+
+    <children>
+        <HBox alignment="CENTER_LEFT" layoutX="8.0" layoutY="14.0" prefHeight="46.0" prefWidth="698.0" spacing="80.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-header" text="Monthly Parking Summary">
+                    <font><Font name="Calibri Bold" size="30.0" /></font>
+                </Text>
+                <ToggleButton fx:id="weeklyToggle" mnemonicParsing="false" onAction="#handleWeeklyToggle" prefHeight="26.0" prefWidth="70.0" styleClass="toggle-button" text="Weekly">
+                    <font><Font name="Calibri Bold" size="12.0" /></font>
+                </ToggleButton>
+                <Text fx:id="reportMonthYear" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-miniheader" text="MM/YYYY">
+                    <font><Font name="Calibri Bold" size="30.0" /></font>
+                </Text>
+            </children>
+        </HBox>
+
+        <BarChart fx:id="parkingBarChart" layoutX="9.0" layoutY="70.0" prefHeight="430.0" prefWidth="785.0" styleClass="chart">
+            <xAxis>
+                <CategoryAxis fx:id="chartDayAxies" label="Day" prefWidth="657.0" styleClass="axis">
+                    <tickLabelFont><Font name="Calibri" size="14.0" /></tickLabelFont>
+                </CategoryAxis>
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="chartCapacityAxies" autoRanging="false" label="Capacity" lowerBound="0" styleClass="axis" tickUnit="10" upperBound="100">
+                    <tickLabelFont><Font name="Calibri" size="14.0" /></tickLabelFont>
+                </NumberAxis>
+            </yAxis>
+        </BarChart>
+      <ImageView fx:id="CSVexportBtn" fitHeight="55.0" fitWidth="55.0" layoutX="739.0" layoutY="10.0" onMouseClicked="#handleCSVexport" pickOnBounds="true" preserveRatio="true" styleClass="csv-button"/>
+    </children>
+</AnchorPane>

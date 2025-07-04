@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainScreen" prefHeight="514.0" prefWidth="884.0" styleClass="root" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client_gui.UsersReportController">
+    
+    <children>
+        <HBox alignment="CENTER_LEFT" layoutX="8.0" layoutY="14.0" prefHeight="46.0" prefWidth="753.0" spacing="300.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-header" text="Monthly Users Summary">
+                    <font><Font name="Calibri Bold" size="30.0" /></font>
+                </Text>
+                <Text fx:id="reportMonthYear" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-miniheader" text="MM/YYYY">
+                    <font><Font name="Calibri Bold" size="30.0" /></font>
+                </Text>
+            </children>
+        </HBox>
+
+        <PieChart fx:id="userPieChart" layoutX="18.0" layoutY="76.0" prefHeight="423.0" prefWidth="847.0" styleClass="chart" />
+      <ImageView fx:id="CSVexportBtn" fitHeight="55.0" fitWidth="55.0" layoutX="821.0" layoutY="10.0" onMouseClicked="#handleCSVexport" pickOnBounds="true" preserveRatio="true" styleClass="csv-button"/>
+    </children>
+</AnchorPane>

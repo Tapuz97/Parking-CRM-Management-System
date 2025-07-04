@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="mainScreen" maxHeight="290.0" maxWidth="406.0" minHeight="290.0" minWidth="406.0" prefHeight="290.0" prefWidth="406.0" styleClass="root" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client_gui.ClientLoginController">
+
+    <children>
+
+        <ImageView fx:id="loginLogo" fitHeight="98.0" fitWidth="200.0" layoutX="99.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="header_image"/>
+
+
+        <ToggleButton fx:id="themeToggle" layoutX="350.0" layoutY="14.0" onAction="#switchTheme" styleClass="toggle-button" text="☀🌙" />
+
+        <VBox alignment="CENTER" layoutX="26.0" layoutY="122.0" prefHeight="85.0" prefWidth="354.0" style="-fx-spacing: 16;">
+            <children>
+                <HBox prefHeight="30.0" prefWidth="354.0" style="-fx-spacing: 16;">
+                    <children>
+                        <TextField fx:id="c_email" prefHeight="26.0" prefWidth="165.0" promptText="Email" styleClass="text-field" />
+                        <TextField fx:id="c_password" prefHeight="26.0" prefWidth="165.0" promptText="Password" styleClass="text-field" />
+                    </children>
+                </HBox>
+
+                <HBox prefHeight="30.0" prefWidth="354.0" style="-fx-spacing: 16;">
+                    <children>
+                        <TextField fx:id="c_sip" prefHeight="26.0" prefWidth="165.0" promptText="Server IP" styleClass="text-field" />
+                        <TextField fx:id="c_sport" prefHeight="26.0" prefWidth="165.0" promptText="Server Port" styleClass="text-field" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+
+        <Button fx:id="loginBtn" layoutX="142.0" layoutY="229.0" onAction="#handleloginBtn" prefHeight="29.0" prefWidth="109.0" styleClass="button" text="Login" />
+        <ImageView fx:id="QRloginBtn" fitHeight="43.0" fitWidth="46.0" layoutX="337.0" layoutY="222.0" onMouseClicked="#handleQRloginBtn" pickOnBounds="true" preserveRatio="true" styleClass="img-button" />
+    </children>
+</AnchorPane>

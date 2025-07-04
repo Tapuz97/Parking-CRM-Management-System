@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane fx:id="mainScreen" prefHeight="321.0" prefWidth="590.0" styleClass="root" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client_gui.UserScreensController">  <tabs>
+	<Tab closable="false" styleClass="tab-pane" text="Deposite Vehicle">
+	  <content>
+	    <AnchorPane>
+	      <children>
+	        <Text layoutX="160.0" layoutY="43.0" styleClass="text-header" text="Deposite Vehicle">
+	          <font><Font name="Calibri Bold" size="38.0" /></font>
+	        </Text>
+	        <Text layoutX="18.0" layoutY="72.0" styleClass="text-miniheader" text="If you placed an order, enter it below. else, click &quot;Park&quot; and wait for the system to look for avalible parking spot." wrappingWidth="475.0">
+	          <font><Font size="18.0" /></font>
+	        </Text>
+	        <HBox layoutX="128.0" layoutY="146.0" spacing="35.0">
+	          <children>
+	            <TextField fx:id="OrderInput" prefHeight="38.0" prefWidth="189.0" promptText="Order Number" styleClass="text-field" />
+	            <Button fx:id="ParkBtn" onAction="#ParkCar" prefHeight="35.0" prefWidth="109.0" styleClass="button" text="Park" />
+	          </children>
+	        </HBox>
+	      </children>
+	    </AnchorPane>
+	  </content>
+	</Tab>
+	    <Tab fx:id="PickupInput" closable="false" styleClass="tab-pane" text="PickUp/Extend">
+	  <content>
+	    <AnchorPane>
+	      <children>
+	        <Text layoutX="166.0" layoutY="43.0" styleClass="text-header" text="PickUp / Extend">
+	          <font><Font name="Calibri Bold" size="38.0" /></font>
+	        </Text>
+	        <Text layoutX="14.0" layoutY="66.0" styleClass="text-miniheader" text="Enter PickUp Code Or Extend Current Parking. If you lost your code, click &quot;Recover&quot;." wrappingWidth="475.0">
+	          <font><Font name="Calibri" size="18.0" /></font>
+	        </Text>
+	        <HBox layoutX="69.0" layoutY="114.0" spacing="35.0">
+	          <children>
+	            <TextField fx:id="ParkingConfirmationInput" prefHeight="38.0" prefWidth="189.0" promptText="Parking Confirmation Code" styleClass="text-field" />
+	            <Button fx:id="PickupBtn" onAction="#PickUp" prefHeight="35.0" prefWidth="109.0" styleClass="button" text="PickUp" />
+	            <Button fx:id="ExtendBtn" onAction="#ExtendParking" prefHeight="35.0" prefWidth="109.0" styleClass="button" text="Extend" />
+	          </children>
+	        </HBox>
+	        <Button fx:id="RecoverBtn" layoutX="238.0" layoutY="182.0" onAction="#RecoverUser" prefHeight="35.0" prefWidth="107.0" styleClass="button" text="Recover" />
+	      </children>
+	    </AnchorPane>
+	  </content>
+	</Tab>
+	<Tab closable="false" styleClass="tab-pane" text="Reserve Parking">
+	  <content>
+	    <AnchorPane>
+	      <children>
+	        <Text layoutX="166.0" layoutY="43.0" styleClass="text-header" text="Reserve Parking">
+	          <font><Font name="Calibri Bold" size="38.0" /></font>
+	        </Text>
+	        <Text layoutX="14.0" layoutY="66.0" styleClass="text-miniheader" text="Resevation is allowed as early as 24 hours and as late as 7 days from the current date" wrappingWidth="475.0">
+	          <font><Font name="Calibri" size="18.0" /></font>
+	        </Text>
+	        <HBox layoutX="30.0" layoutY="135.0" spacing="35.0">
+	          <children>
+	            <DatePicker fx:id="DateInput" prefHeight="45.0" prefWidth="199.0" />
+	            <MenuButton fx:id="HourInput" prefHeight="37.0" prefWidth="120.0" text="Time">
+	              <items>
+	                <MenuItem onAction="#handleTimeSelection" text="1" />
+	                <MenuItem onAction="#handleTimeSelection" text="2" />
+	                <MenuItem onAction="#handleTimeSelection" text="3" />
+	                <MenuItem onAction="#handleTimeSelection" text="4" />
+	                <MenuItem onAction="#handleTimeSelection" text="5" />
+	                <MenuItem onAction="#handleTimeSelection" text="6" />
+	                <MenuItem onAction="#handleTimeSelection" text="7" />
+	                <MenuItem onAction="#handleTimeSelection" text="8" />
+	                <MenuItem onAction="#handleTimeSelection" text="9" />
+	                <MenuItem onAction="#handleTimeSelection" text="10" />
+	                <MenuItem onAction="#handleTimeSelection" text="11" />
+	                <MenuItem onAction="#handleTimeSelection" text="12" />
+	              </items>
+	            </MenuButton>
+	            <MenuButton fx:id="AmPmInput" prefHeight="38.0" prefWidth="134.0" text="AM/PM">
+	              <items>
+	                <MenuItem onAction="#handleAmPmSelection" text="AM ☀" />
+	                <MenuItem onAction="#handleAmPmSelection" text="PM 🌙" />
+	              </items>
+	            </MenuButton>
+	          </children>
+	        </HBox>
+	            <Button fx:id="ReserveBtn" layoutX="238.0" layoutY="207.0" onAction="#ReserveOrder" prefHeight="38.0" prefWidth="108.0" styleClass="button" text="Reserve">
+	              <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font>
+	            </Button>
+	      </children>
+	    </AnchorPane>
+	  </content>
+	</Tab>
+	     <Tab closable="false" onSelectionChanged="#getUserHistory" styleClass="tab-pane" text="Parking History">
+	  <content>
+	    <AnchorPane>
+	      <children>
+	        <Text layoutX="173.0" layoutY="43.0" styleClass="text-header" text="Parking History">
+	          <font><Font name="Calibri Bold" size="38.0" /></font>
+	        </Text>
+	        <ListView fx:id="UserHistoryList" layoutX="24.0" layoutY="53.0" prefHeight="213.0" prefWidth="538.0" styleClass="list-view" />
+	      </children>
+	    </AnchorPane>
+	  </content>
+	</Tab>
+	     <Tab closable="false" onSelectionChanged="#showUserDetails" styleClass="tab-pane" text="Settings">
+	  <content>
+	    <AnchorPane prefHeight="346.0" prefWidth="551.0">
+	      <children>
+	        <Text layoutX="229.0" layoutY="43.0" styleClass="text-header" text="Settings">
+	          <font><Font name="Calibri Bold" size="38.0" /></font>
+	        </Text>
+	
+	        <HBox alignment="CENTER" layoutX="21.0" layoutY="55.0" prefHeight="157.0" prefWidth="542.0" spacing="150.0">
+	          <children>
+	
+	            <VBox alignment="TOP_CENTER" prefHeight="106.0" prefWidth="175.0" spacing="30.0">
+	              <children>
+	                <TextField fx:id="UserPasswordInput" editable="false" promptText="UserPassword" styleClass="text-field" />
+	                <TextField fx:id="UserEmailInput" editable="false" promptText="UserEmail" styleClass="text-field" />
+	                <TextField fx:id="UserPhoneInput" editable="false" promptText="UserPhone" styleClass="text-field" />
+	              </children>
+	            </VBox>
+	
+	            <VBox alignment="TOP_CENTER" prefHeight="152.0" prefWidth="175.0" spacing="30.0">
+	              <children>
+	                <TextField fx:id="UserNameInput" editable="false" promptText="UserName" styleClass="text-field" />
+	                <TextField fx:id="UserIdInput" editable="false" promptText="UserId" styleClass="text-field" />
+	              </children>
+	            </VBox>
+	
+	          </children>
+	        </HBox>
+	
+	        <Button fx:id="EditBtn" layoutX="466.0" layoutY="212.0" onAction="#EditUserDetails" prefHeight="32.0" prefWidth="97.0" styleClass="button" text="Edit 🔧">
+	          <font><Font name="Calibri Bold" size="14.0" /></font>
+	        </Button>
+	
+	        <Button fx:id="LogoutBtn" layoutX="21.0" layoutY="212.0" onAction="#Logout" prefHeight="32.0" prefWidth="97.0" styleClass="button" text="← Logout">
+	          <font><Font name="Calibri Bold" size="14.0" /></font>
+	        </Button>
+	
+	        <ToggleButton fx:id="themeToggle" layoutX="522.0" layoutY="14.0" onAction="#switchTheme" styleClass="toggle-button" text="☀🌙" />
+	      </children>
+	    </AnchorPane>
+	  </content>
+	</Tab>
+  </tabs>
+</TabPane>

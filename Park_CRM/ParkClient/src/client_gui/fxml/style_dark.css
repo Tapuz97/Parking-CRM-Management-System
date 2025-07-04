@@ -1,0 +1,434 @@
+.root {
+    -fx-background-color: #2b3137;
+}
+
+
+.text-field {
+    -fx-background-color: #22263e;
+    -fx-text-fill: #fdca2b;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+	-fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+
+.button {
+    -fx-background-color: transparent;
+    -fx-border-color: #fdca2b;
+    -fx-text-fill: #fdca2b;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+	-fx-font-size: 15px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #fdca2b;
+    -fx-text-fill: #2b3137;
+}
+
+.button-logout {
+    -fx-background-color: transparent;
+    -fx-border-color: #fdca2b;
+    -fx-text-fill: #fdca2b;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+	-fx-font-size: 15px;
+    -fx-cursor: hand;
+}
+
+.button-logout:hover > button {
+    -fx-background-color: red;
+    -fx-text-fill: blue;
+}
+
+.text-header {
+    -fx-font-family: "Calibri";
+    -fx-font-size: 38px;
+    -fx-font-weight: bold;
+
+    -fx-fill: #22263e;        /* inner fill */
+    -fx-stroke: #fdca2b;      /* outline stroke */
+    -fx-stroke-width: 0.5;
+}
+
+.text-miniheader {
+    -fx-font-family: "Calibri";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-fill: #fdca2b;        /* inner fill */
+}
+
+.text-tab {
+    -fx-font-family: "Calibri";
+    -fx-font-size: 12px;
+    -fx-text-fill: #fdca2b;
+	-fx-background-color: #22263e;
+}
+
+.img-button{
+    -fx-image: url("qr_alt.png");
+    -fx-cursor: hand;
+}
+.img-button:hover {
+    -fx-image: url("qr_default.png");
+}
+
+.csv-button{
+    -fx-image: url("csv_default.png");
+    -fx-cursor: hand;
+    -fx-padding: 5;
+}
+.csv-button:hover {
+    -fx-image: url("csv_alt.png");
+    -fx-effect: dropshadow(gaussian, #00bf5b, 6, 0.5, 0, 0);
+}
+
+.header_image{
+	-fx-image: url("/lib/Bpark_logo.png");
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: #fdca2b; /* your theme yellow */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-color: #2b3137
+}
+.dialog-pane .header-panel{
+    -fx-text-fill: #fdca2b; /* your theme yellow */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-color: #2b3137
+}
+
+.tab-pane .tab-header-background {/*white space of each tab in the header area*/
+    -fx-background-color: #22263e;
+}
+.tab-pane .tab-content-area {/*entire tab background color*/
+    -fx-background-color: #2b3137;
+}
+.tab-pane:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/*list*/
+.list-view {
+    -fx-background-color: #22263e;
+    -fx-control-inner-background: #22263e;
+    -fx-border-color: transparent;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-text-fill: #fdca2b;
+    -fx-font-family: "Calibri";
+    -fx-font-size: 14px;
+}
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #fdca2b;
+}
+
+.list-cell:hover {
+    -fx-background-color: #2b3137;
+    -fx-text-fill: #fdca2b;
+}
+
+.list-cell:selected {
+    -fx-background-color: #fdca2b;
+    -fx-text-fill: #2b3137;
+}
+
+/*header tab*/
+/*text*/
+.tab-pane .tab-header-area .tab .tab-label {/*text field*/
+    -fx-text-fill: #fdca2b;
+    -fx-font-family: "Calibri";
+	-fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+
+.tab-pane .tab-header-area .tab:selected .tab-label {/*when the tab the text is in will be selected*/
+    -fx-text-fill: #2b3137;
+    -fx-font-family: "Calibri";
+	-fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+
+/*background*/
+.tab-pane .tab {/*background color*/
+    -fx-background-color: #2b3137;
+	-fx-cursor: hand;
+}
+.tab-pane .tab:hover {
+    -fx-background-color: #2b3137;
+	-fx-border-color: #fdca2b;
+	-fx-border-width: 1px;
+	-fx-border-radius: 5;
+	-fx-cursor: hand;
+}
+.tab-pane .tab:selected {
+    -fx-background-color: #fdca2b;
+}
+
+/*=================================================================================================*/
+/*=================================================================================================*/
+/*=================================================================================================*/
+
+/* === DROPDOWN MENU === */
+
+.menu-button {
+    -fx-background-color: #fdca2b;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 4 10 4 10;
+    -fx-border-color: transparent;
+}
+
+/* Text color inside the button */
+.menu-button > .label {
+    -fx-text-fill: #2b3137;
+}
+
+/* Arrow color inside the button */
+.menu-button .arrow {
+    -fx-background-color: #2b3137;
+}
+
+
+/* === MENU DROPDOWN ITEMS === */
+
+.context-menu {
+    -fx-background-color: #22263e;
+    -fx-background-radius: 8;
+    -fx-padding: 4;
+    -fx-border-color: transparent;
+}
+
+/* Menu item text and base color */
+.context-menu .menu-item {
+    -fx-background-color: transparent;
+    -fx-padding: 5 10 5 10;
+    -fx-background-radius: 5;
+}
+
+/* The actual text inside each menu item */
+.context-menu .menu-item > .label {
+    -fx-text-fill: #fdca2b;
+    -fx-font-family: "Calibri";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+/* Hover effect for menu items */
+.context-menu .menu-item:hover {
+    -fx-background-color: #fdca2b;
+}
+
+.context-menu .menu-item:hover > .label {
+    -fx-text-fill: #22263e;
+}
+/*=================================================================================================*/
+/*=================================================================================================*/
+/*=================================================================================================*/
+
+/* === DATE PICKER FIELD === */
+
+.date-picker {
+    -fx-background-color: #22263e;
+    -fx-border-color: #fdca2b;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-font-family: "Calibri";
+    -fx-font-size: 14px;
+}
+
+.date-picker > .text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: #fdca2b;
+    -fx-font-weight: bold;
+}
+
+/* === ARROW BUTTON === */
+.date-picker .arrow-button {
+    -fx-background-color: #fdca2b;
+    -fx-background-radius: 0 8 8 0;
+    -fx-cursor: hand;
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: #2b3137;
+}
+
+/* === CALENDAR POPUP === */
+.date-picker-popup {
+    -fx-background-color: transparent;
+    -fx-border-color: #fdca2b;
+    -fx-border-radius: 8;
+}
+
+/* === HEADER (MONTH / YEAR) === */
+.date-picker-popup .month-year-pane {
+    -fx-background-color: #22263e;
+}
+
+.date-picker-popup .month-year-pane .label {
+    -fx-text-fill: #fdca2b;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+}
+
+/* === DAY CELLS === */
+.date-picker-popup .calendar-grid .day-cell {
+    -fx-background-color: #22263e;
+    -fx-text-fill: #fdca2b;
+    -fx-font-family: "Calibri";
+    -fx-alignment: center;
+    -fx-border-color: white;
+}
+
+/* === HOVER ON DAY === */
+.date-picker-popup .calendar-grid .day-cell:hover {
+    -fx-background-color: #fdca2b;
+    -fx-text-fill: #2b3137;
+}
+
+/* === TODAY === */
+.date-picker-popup .calendar-grid .day-cell.today {
+	-fx-text-fill: 	#22263e;
+	-fx-background-color: #fdca2b;
+}
+/* === Day-of-Week Headers (Sun, Mon, ...) === */
+.date-picker-popup .calendar-grid .label {
+    -fx-background-color: #fdca2b;   /* background of weekday labels */
+    -fx-text-fill: #2b3137;          /* text color (dark for contrast) */
+    -fx-font-weight: bold;
+    -fx-font-family: "Calibri";
+    -fx-alignment: center;
+}
+
+/*=================================================================================================*/
+/* === Custom Alert Dialog === */
+.custom-alert {
+    -fx-background-color: #22263e;
+    -fx-background-radius: 10;
+    -fx-border-color: #fdca2b;
+    -fx-border-radius: 10;
+}
+
+.custom-alert .content {
+    -fx-text-fill: #fdca2b;
+    -fx-font-family: "Calibri";
+    -fx-font-size: 14px;
+    -fx-padding: 10;
+}
+
+.custom-alert .button-bar .button {
+    -fx-background-color: transparent;
+    -fx-border-color: #fdca2b;
+    -fx-text-fill: #fdca2b;
+    -fx-font-weight: bold;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-cursor: hand;
+}
+
+.custom-alert .button-bar .button:hover {
+    -fx-background-color: #fdca2b;
+    -fx-text-fill: #2b3137;
+}
+
+.toggle-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #fdca2b;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-text-fill: #fdca2b;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.toggle-button:hover {
+    -fx-background-color: #fdca2b;
+    -fx-text-fill: #2b3137;
+}
+
+.toggle-button:selected {
+    -fx-background-color: #fdca2b;
+    -fx-text-fill: #2b3137;
+}
+
+.chart {
+    -fx-background-color: #22263e;
+    -fx-text-fill: #fdca2b;
+    -fx-font-family: "Calibri";
+}
+
+.chart-title {
+    -fx-text-fill: #fdca2b;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.chart-legend {
+    -fx-text-fill: #fdca2b;
+    -fx-background-color: transparent;
+}
+
+.axis {
+    -fx-tick-label-fill: #fdca2b;
+    -fx-axis-line-visible: false;
+}
+
+.chart-bar {
+    -fx-bar-fill: #fdca2b;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+/* === PIE CHART STYLING === */
+
+.chart {
+    -fx-background-color: #22263e;
+    -fx-font-family: "Calibri";
+}
+
+.chart-title {
+    -fx-text-fill: #fdca2b;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.chart-legend {
+    -fx-background-color: transparent;
+    -fx-text-fill: #fdca2b;
+}
+
+/* Tooltip styling (hover text over slices) */
+.chart-pie-label {
+    -fx-fill: #fdca2b;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+.chart-legend-item {
+    -fx-text-fill: #fdca2b;           /* ✅ Changes the legend label text */
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+}
+
+
+
